@@ -1,0 +1,125 @@
+@font-face {
+    font-family: ticTacToe;
+    src: url("./assets/fonts/8-bit-pusab.ttf");
+}
+
+@font-face {
+    font-family: game;
+    src: url("./assets/fonts/my\ game.ttf");
+}
+
+:root {
+    --color-x: red;
+    --color-o: blue;
+    --line-style: 7px solid black; 
+}
+
+body {
+    user-select: none;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: ticTacToe;
+}
+
+#boardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 0fr);
+    justify-content: center;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8rem;
+    font-weight: bold;
+}
+
+.up {
+    border-bottom: var(--line-style);
+}
+
+.center {
+    border-right: var(--line-style);
+    border-left: var(--line-style);
+}
+
+.down {
+    border-top: var(--line-style);
+}
+
+.winner {
+    background-color: rgba(9, 255, 0, 0.3);
+}
+
+.p1 {
+    color: var(--color-x);
+}
+
+.p2 {
+    color: var(--color-o);
+}
+
+#turnsContainer {
+    margin: 0 auto;
+    width: 600px;
+    font-family: ticTacToe;
+    font-size: 0.6rem;
+}
+
+dialog {
+    text-align: center;
+    width: max-content;
+    background-color: rgba(209, 209, 209, 0.8);
+    padding: 3rem 5rem;
+    border: none;
+    font-family: ticTacToe;
+    font-size: 0.8rem;
+}
+
+.winModal {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-areas: 'h2 h3' 'button button';
+}
+
+dialog h2{
+    grid-area: h2;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    width: max-content;
+    height: max-content;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+dialog h3{
+    grid-area: h3;
+    display: flex;
+    justify-self: start;
+    align-self: center;
+    width: max-content;
+    height: max-content;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+dialog button {
+    grid-area: button;
+    padding: 1rem;
+    font-family: ticTacToe;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: block;
+}
+
+dialog::backdrop{
+    backdrop-filter: blur(3px);
+}
