@@ -1,5 +1,6 @@
 # Tic Tac Toe
 Esta es una página que simula el juego universalmente conocido: "Ta te ti", programado con HTML, CSS y JS.
+
 This page simulates the world known game "Tic tac toe", programmed with HTML, CSS and JS.
 
 ## Demo
